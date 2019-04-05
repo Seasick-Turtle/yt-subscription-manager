@@ -1,6 +1,12 @@
 {
- "manifest_version": 2,
+  "manifest_version": 2,
   "name": "youtube-subscription-manager",
   "version": "1.0",
-  "description": "Provides a subscription manager to allow users to manage subscriptions"
+  "description": "Provides a subscription manager to allow users to manage subscriptions",
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["subscription-manager.js"]
+    }
+  ]
 }
